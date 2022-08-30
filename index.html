@@ -9,8 +9,7 @@
   </head>
 
   <body>
-    <button id="start">スタート!</button>
-    <button id="stop">ストップ</button>
+    <button id="button">スタート</button>
     <button id="reset">リセット</button>
     <!-- <input type="button" id="start" value="スタート" onclick="start()"> -->
     <!-- <input type="button" id="stop" value="ストップ" onclick="stop()"> -->
@@ -19,17 +18,22 @@
   </body>
 
   <script>
-    const start_button=document.getElementById("start");
-    const stop_button=document.getElementById("stop");
+    button_on=false;
+    const button_button=document.getElementById("button");
     const reset_button=document.getElementById("reset");
 
-    start_button.onclick=function(){
-      start_music();
-      start();
-    };
-    stop_button.onclick=function(){
-      stop_music();
-      stop();
+    button.onclick=function(){
+      if(!button_on){
+        button_on=true;
+        document.getElementById("button").innerHTML="ストップ";
+        start_music();
+        start();
+      }else{
+        button_on=false;
+        document.getElementById("button").innerHTML="スタート";
+        stop_music();
+        stop();
+      }
     }
     reset_button.onclick=function(){
       reset();
