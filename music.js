@@ -1,11 +1,19 @@
-function start_music(){
-    // window.alert("click start");
-    console.log("click stars");
-}
-
-function stop_music(){
-    // window.alert("ckick stop");
-    console.log("click stop");
+window.onload=function(){
+    window.AudioContext=window.AudioContext||window.webkitAudioContext;
+    const audioElement=document.querySelector("audio");
+    
+    document.getElementById("start").onclick=function(){
+        const ctx=new AudioContext();    
+        const track=ctx.createMediaElementSource(audioElement);
+        console.log("click start");
+        if(ctx.state==="suspended") ctx.resume();
+        track.connect(ctx.destination);
+        audioElement.play();
+    }
+    document.getElementById("stop").onclick=function(){
+        console.log("click stop");
+        audioElement.pause();
+    }
 }
 
 // start_button.onclick(()=>function(){

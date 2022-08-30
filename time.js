@@ -16,19 +16,21 @@ function now(){
         if(bool_stop==false)window.setTimeout(now, 100);
     }
 }
-
-function start(){
-    // console.log(bool_stop);
-    if(bool_stop){
-        bool_stop=false;
+window.onload=function(){
+    document.getElementById("start").onclick=function(){
+        console.log(bool_stop);
+        if(bool_stop){
+            bool_stop=false;
+            now();
+        }
+    }
+    document.getElementById("stop").onclick=function(){
+        bool_stop=true;
         now();
     }
 }
 
-function stop(){
-    bool_stop=true;
-    now();
-}
+    
 
 function reset(){
     // リセット機能を追加
