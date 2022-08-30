@@ -29,24 +29,29 @@ function now(){
             //BGM
             document.getElementById('BGM1_back').play();
             document.getElementById('BGM1').pause();
-            document.getElementById('BGM1_back').playbackRate = 0.75;
+            document.getElementById('BGM1_back').playbackRate = 0.5;
         }else{
             timeALL=1500;
             interval_timeALL=300;
         }
         
         //Œø‰Ê‰¹
-        if(timeALL==300){
-            document.getElementById('speedupSE').play();
-        }
-        if(timeALL==0){
+
+        if(timeALL==1){
             document.getElementById('finSE').play();
+        }else if(timeALL==301){
+            document.getElementById('speedupSE').play();
+        }else if(timeALL%300-1==0){
+            document.getElementById('startSE').play();
         }
-        if(interval_timeALL==0)document.getElementById('finSE').play();
+
+        if(interval_timeALL==0)document.getElementById('startSE').play();
  
         document.getElementById("time").innerHTML=timeM+":"+timeS;
         if(bool_stop==false)window.setTimeout(now, 20);
     }
+    const style = getComputedStyle(document.getElementById('circle::after'));
+    document.documentElement.style.setProperty('--test', 0.6);
 }
 
 function start(){
@@ -60,6 +65,7 @@ function start(){
 function stop(){
     bool_stop=true;
     document.getElementById('BGM1').pause();
+    document.getElementById('stopSE').play();
     now();
 }
 
