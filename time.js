@@ -20,7 +20,9 @@ function now(){
             timeALL=1500;
             interval_timeALL=300;
         }
-
+        
+        //Œø‰Ê‰¹
+        if(timeALL==0)document.getElementById('finSE').play();
  
         document.getElementById("time").innerHTML=timeM+":"+timeS;
         if(bool_stop==false)window.setTimeout(now, 5);
