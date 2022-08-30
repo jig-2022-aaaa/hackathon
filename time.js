@@ -4,7 +4,7 @@ var bool_stop=true;
 
 function now(){
     if(!bool_stop){
-        if(timeALL>0){//通常時間
+        if(timeALL>0){//????
             timeALL--;
             var timeS=timeALL%60;
             var timeM=Math.floor(timeALL/60);
@@ -15,11 +15,11 @@ function now(){
             document.getElementById('BGM1').play();
             document.getElementById('BGM1_back').pause();
             if(timeALL>300){
-                document.getElementById('BGM1').playbackRate = 0.75;
+                document.getElementById('BGM1').playbackRate = 0.75;//???????????????????????
             }else{
                 document.getElementById('BGM1').playbackRate = 3.0;
             }
-        }else if(interval_timeALL>=0){//インターバル時間
+        }else if(interval_timeALL>=0){//????????
             if(interval_timeALL!=0)interval_timeALL--;
             var timeS=interval_timeALL%60;
             var timeM=Math.floor(interval_timeALL/60);
@@ -35,7 +35,7 @@ function now(){
             interval_timeALL=0;
         }
         
-        //効果音
+        //???
 
         if(timeALL==1){
             document.getElementById('finSE').play();
@@ -48,7 +48,7 @@ function now(){
         if(interval_timeALL==0)document.getElementById('startSE').play();
  
         document.getElementById("time").innerHTML=timeM+":"+timeS;
-        if(bool_stop==false)window.setTimeout(now, 10);//1000で一秒
+        if(bool_stop==false)window.setTimeout(now, 10);//1000???
     }
     const style = getComputedStyle(document.getElementById('circle::after'));
     document.documentElement.style.setProperty('--test', 0.6);
