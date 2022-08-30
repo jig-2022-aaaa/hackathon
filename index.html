@@ -7,27 +7,37 @@
     <script src="time.js"></script>
     <!-- <script src="music.js"></script> -->
     <audio id="BGM1">
-      <source src="./BGM/ClassicSoundLib_Cannon.mp3" type="audio/mp3" loop="true">
+      <source src="./BGM/ClassicSoundLib_Cannon.mp3" type="audio/mp3">
+    </audio>
+    <audio id="BGM1_back">
+      <source src="./BGM/逆カノン.mp3" type="audio/mp3">
     </audio>
 
+    <!--SE-->
     <audio id="finSE">
+      <source src="./効果音/大勢で拍手.mp3" type="audio/mp3">
+    </audio>
+    <audio id="startSE">
       <source src="./効果音/鳩時計1.mp3" type="audio/mp3">
-  </audio>
-  <audio id="stopSE">
-    <source src="./効果音/鳩時計2.mp3" type="audio/mp3">
-  </audio>
-  <audio id="speedupSE">
-    <source src="./効果音/回復魔法3.mp3" type="audio/mp3">
-  </audio>
+    </audio>
+    <audio id="stopSE">
+      <source src="./効果音/鳩時計2.mp3" type="audio/mp3">
+    </audio>
+    <audio id="speedupSE">
+      <source src="./効果音/回復魔法3.mp3" type="audio/mp3">
+    </audio>
   </head>
 
   <body>
-    <button id="button">スタート</button>
-    <button id="reset">リセット</button>
-    <!-- <input type="button" id="start" value="スタート" onclick="start()"> -->
-    <!-- <input type="button" id="stop" value="ストップ" onclick="stop()"> -->
-    <!-- <input type="button" id="reset" value="リセット" onclick="reset()"> -->
-    <div id="time">____</div>
+    <a class="circle"></a>
+    <clock>
+      <button id="button">スタート</button>
+      <button id="reset">リセット</button>
+      <!-- <input type="button" id="start" value="スタート" onclick="start()"> -->
+      <!-- <input type="button" id="stop" value="ストップ" onclick="stop()"> -->
+      <!-- <input type="button" id="reset" value="リセット" onclick="reset()"> -->
+      <div id="time" class="time">____</div>
+    </clock>
   </body>
 
   <script>
@@ -59,5 +69,4 @@
     }
 
   </script>
-  <script src="music.js"></script>
 </html>
