@@ -16,5 +16,3 @@ stateDiagram
 
 ## 音楽出典
 [classix](https://classix.sitefactory.info/downmp3.html#a01)
-
-あああ（すぐに消す）

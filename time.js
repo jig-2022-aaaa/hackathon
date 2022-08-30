@@ -4,7 +4,7 @@ var bool_stop=true;
 
 function now(){
     if(!bool_stop){
-        if(timeALL>0){//’ÊíŽžŠÔ
+        if(timeALL>0){//ï¿½ÊíŽžï¿½ï¿½
             timeALL--;
             var timeS=timeALL%60;
             var timeM=Math.floor(timeALL/60);
@@ -18,7 +18,7 @@ function now(){
             }else{
                 document.getElementById('BGM1').playbackRate = 3.0;
             }
-        }else if(interval_timeALL>0){//ƒCƒ“ƒ^[ƒoƒ‹ŽžŠÔ
+        }else if(interval_timeALL>0){//ï¿½Cï¿½ï¿½ï¿½^ï¿½[ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             interval_timeALL--;
             var timeS=interval_timeALL%60;
             var timeM=Math.floor(interval_timeALL/60);
@@ -32,7 +32,7 @@ function now(){
             interval_timeALL=300;
         }
         
-        //Œø‰Ê‰¹
+        //ï¿½ï¿½ï¿½Ê‰ï¿½
         if(timeALL==300){
             document.getElementById('speedupSE').play();
         }
@@ -64,8 +64,7 @@ function reset(){
     timeALL=1500;
     bool_stop=true;
     document.getElementById("time").innerHTML="____";
-    document.getElementById('stopSE').play();
-
     document.getElementById('BGM1').pause();
+    document.getElementById('stopSE').play();
 }
 

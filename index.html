@@ -7,7 +7,7 @@
     <script src="time.js"></script>
     <!-- <script src="music.js"></script> -->
     <audio id="BGM1">
-      <source src="./BGM/ClassicSoundLib_Cannon.mp3" type="audio/mp3">
+      <source src="./BGM/ClassicSoundLib_Cannon.mp3" type="audio/mp3" loop="true">
     </audio>
 
     <audio id="finSE">
@@ -31,9 +31,10 @@
   </body>
 
   <script>
-    button_on=false;
+    let button_on=false;
     const button_button=document.getElementById("button");
     const reset_button=document.getElementById("reset");
+    let finish_task=0;
 
     button.onclick=function(){
       if(!button_on){
@@ -54,6 +55,7 @@
         document.getElementById("button").innerHTML="スタート"
       }
       reset();
+      finish_task++;
     }
 
   </script>
