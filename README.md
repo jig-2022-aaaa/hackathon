@@ -13,3 +13,6 @@ stateDiagram
         終了ボタンが押された-->escape
     }
 ```
+
+## 音楽出典
+[classix](https://classix.sitefactory.info/downmp3.html#a01)
