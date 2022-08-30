@@ -34,8 +34,6 @@ function now(){
             timeALL=1500;
             interval_timeALL=300;
         }
-        
-<<<<<<< HEAD
         //���ʉ�
         if(timeALL==300){
             document.getElementById('speedupSE').play();
