@@ -2,36 +2,47 @@
 <html lang="ja">
   <head>
     <!--jigフォントをダウンロードする？-->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Sample</title>
-    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="sample.css" />
     <script src="time.js"></script>
     <script src="music.js"></script>
 
     <!--BGM-->
     <audio id="BGM1">
-      <source src="./BGM/ClassicSoundLib_Cannon.mp3" type="audio/mp3">
+      <source src="./BGM/ClassicSoundLib_Cannon.mp3" type="audio/mp3" />
     </audio>
     <audio id="BGM1_back">
-      <source src="./BGM/ヘッドホンから音漏れ.mp3" type="audio/mp3">
+      <source src="./BGM/ヘッドホンから音漏れ.mp3" type="audio/mp3" />
     </audio>
 
     <!--SE-->
     <audio id="finSE">
-      <source src="./効果音/大勢で拍手.mp3" type="audio/mp3">
+      <source src="./効果音/大勢で拍手.mp3" type="audio/mp3" />
     </audio>
     <audio id="startSE">
-      <source src="./効果音/鳩時計1.mp3" type="audio/mp3">
+      <source src="./効果音/鳩時計1.mp3" type="audio/mp3" />
     </audio>
     <audio id="stopSE">
-      <source src="./効果音/鳩時計2.mp3" type="audio/mp3">
+      <source src="./効果音/鳩時計2.mp3" type="audio/mp3" />
     </audio>
     <audio id="speedupSE">
-      <source src="./効果音/回復魔法3.mp3" type="audio/mp3">
+      <source src="./効果音/回復魔法3.mp3" type="audio/mp3" />
     </audio>
   </head>
 
   <body>
+    <form>
+      <input
+        id="task_value"
+        type="text"
+        placeholder="25分間の目標を入力しよう"
+      />
+    </form>
+    <div id="table">
+      <h2>取り組んでいるタスク</h2>
+      <ul id="task_list"></ul>
+    </div>
     <a class="circle"></a>
     <clock>
       <button id="button">スタート</button>
@@ -43,7 +54,7 @@
         <form method="post" id="form">
           <div>
             <label for="name"></label>
-            <input type="text" placeholder="25分間の目標を入力しよう">
+            <input type="text" placeholder="25分間の目標を入力しよう" />
           </div>
         </form>
       </article>
@@ -52,39 +63,39 @@
   </body>
 
   <script>
-    button_on=false;
-    const button_button=document.getElementById("button");
-    const reset_button=document.getElementById("reset");
+    button_on = false;
+    const button_button = document.getElementById("button");
+    const reset_button = document.getElementById("reset");
     //目標
-    mode1_code='<div>特に目標は無し</div>';
+    mode1_code = "<div>特に目標は無し</div>";
     //二回目以降のフォーム
-    mode2_code='<form method="post" id="form"><div><label for="name"></label><input type="text" placeholder="次の25分間の目標"></div></form>';
+    mode2_code =
+      '<form method="post" id="form"><div><label for="name"></label><input type="text" placeholder="次の25分間の目標"></div></form>';
 
-    button.onclick=function(){
-      if(!button_on){
-        button_on=true;
-        document.getElementById("button").innerHTML="ストップ";
+    button.onclick = function () {
+      if (!button_on) {
+        button_on = true;
+        document.getElementById("button").innerHTML = "ストップ";
         //if() //目標が入力されたか
-          document.getElementById('main_box').innerHTML = mode1_code;//ここにクッキ―から取得した奴いれる
-         //else
-          document.getElementById('main_box').innerHTML = mode1_code;
+        document.getElementById("main_box").innerHTML = mode1_code; //ここにクッキ―から取得した奴いれる
+        //else
+        document.getElementById("main_box").innerHTML = mode1_code;
         start_music();
         start();
-        
-      }else{
-        button_on=false;
-        document.getElementById("button").innerHTML="スタート";
+      } else {
+        button_on = false;
+        document.getElementById("button").innerHTML = "スタート";
         stop_music();
         stop();
       }
-    }
-    reset_button.onclick=function(){
-        button_on=false;
-        document.getElementById("button").innerHTML="スタート";
-        document.getElementById('main_box').innerHTML = mode2_code;
+    };
+    reset_button.onclick = function () {
+      button_on = false;
+      document.getElementById("button").innerHTML = "スタート";
+      document.getElementById("main_box").innerHTML = mode2_code;
       reset();
-    }
-
+    };
   </script>
   <script src="music.js"></script>
+  <script src="task.js"></script>
 </html>
