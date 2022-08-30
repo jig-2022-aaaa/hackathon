@@ -27,3 +27,7 @@ function stop(){
  bool_stop=true;
  now();
 }
+
+function reset(){
+    // リセット機能を追加
+}

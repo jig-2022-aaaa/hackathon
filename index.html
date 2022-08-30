@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
- <meta charset="utf-8">
- <title>Sample</title>
- <link rel="stylesheet" href="sample.css">
- <script src="time.js"></script>
- </head>
+  <head>
+    <meta charset="utf-8">
+    <title>Sample</title>
+    <link rel="stylesheet" href="sample.css">
+    <script src="time.js"></script>
+    <script src="music.js"></script>
+  </head>
 
- <body>
- <input type="button" value="スタート" onclick="start()">
-  <input type="button" value="ストップ" onclick="stop()">
- <div id="time">____</div>
- </body>
+  <body>
+    <input type="button" id="start" value="スタート" onclick="start()">
+    <input type="button" id="stop" value="ストップ" onclick="stop()">
+    <input type="button" id="reset" value="リセット" onclick="reset()">
+    <div id="time">____</div>
+  </body>
 
 </html>
