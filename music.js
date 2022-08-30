@@ -8,7 +8,6 @@ window.onload=function(){
     document.getElementById("stop").onclick=function(){
         console.log("click stop");
         bgm.pause();
-        // audioElement.pause();
     }
 }
 

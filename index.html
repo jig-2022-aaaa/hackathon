@@ -5,7 +5,7 @@
     <title>Sample</title>
     <link rel="stylesheet" href="sample.css">
     <script src="time.js"></script>
-    <script src="music.js"></script>
+    <!-- <script src="music.js"></script> -->
   </head>
 
   <body>
@@ -15,21 +15,20 @@
     <!-- <input type="button" id="start" value="スタート" onclick="start()"> -->
     <!-- <input type="button" id="stop" value="ストップ" onclick="stop()"> -->
     <!-- <input type="button" id="reset" value="リセット" onclick="reset()"> -->
+    <!-- <audio id="bgm" src="前奏曲-第7番.mp3" loop="true"></audio> -->
     <div id="time">____</div>
-    <!-- <audio src="前奏曲-第7番.mp3" id="bgm"></audio> -->
   </body>
-
   <script>
-    // const start_button=document.getElementById("start");
-    // const stop_button=document.getElementById("stop");
-    // const reset_button=document.getElementById("reset");
+    // let bgm=new Audio("前奏曲-第7番.mp3");
+    // bgm.loop=true;
 
     document.getElementById("start").onclick=function(){
-      start();
-    };
-    document.getElementById("stop").onclick=function(){
-      stop();
+        // console.log("click start");
+        // bgm.play();
     }
-
+    document.getElementById("stop").onclick=function(){
+        // console.log("click stop");
+        // bgm.pause();
+    }
   </script>
 </html>

@@ -30,9 +30,3 @@ window.onload=function(){
     }
 }
 
-    
-
-function reset(){
-    // リセット機能を追加
-}
-
