@@ -23,6 +23,7 @@ function now(){
         
         //Œø‰Ê‰¹
         if(timeALL==0)document.getElementById('finSE').play();
+        if(interval_timeALL==0)document.getElementById('finSE').play();
  
         document.getElementById("time").innerHTML=timeM+":"+timeS;
         if(bool_stop==false)window.setTimeout(now, 5);
@@ -46,5 +47,6 @@ function reset(){
     timeALL=1500;
     bool_stop=true;
     document.getElementById("time").innerHTML="____";
+    document.getElementById('stopSE').play();
 }
 
