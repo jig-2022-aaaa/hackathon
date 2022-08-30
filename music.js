@@ -1,10 +1,19 @@
-let start_button = document.getElementsByID("start");
-let stop_button = document.getElementById("stop");
+function start_music(){
+    // window.alert("click start");
+    console.log("click stars");
+}
 
-start_button.addEventListener('click',function(){
-    window.alert("click start");
-});
+function stop_music(){
+    // window.alert("ckick stop");
+    console.log("click stop");
+}
 
-stop_button.addEventListener('click',function(){
-    window.alert("ckick stop");
-});
+// start_button.onclick(()=>function(){
+//     window.alert("click start");
+//     console.log("click stars");
+// });
+
+// stop_button.onclick(()=>function(){
+//     window.alert("ckick stop");
+//     console.log("click stop");
+// })
