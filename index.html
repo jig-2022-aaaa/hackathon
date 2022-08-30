@@ -5,7 +5,7 @@
     <title>Sample</title>
     <link rel="stylesheet" href="sample.css">
     <script src="time.js"></script>
-    <script src="music.js"></script>
+    <!-- <script src="music.js"></script> -->
     <audio id="BGM1">
       <source src="./BGM/ClassicSoundLib_Cannon.mp3" type="audio/mp3">
     </audio>
@@ -39,16 +39,20 @@
       if(!button_on){
         button_on=true;
         document.getElementById("button").innerHTML="ストップ";
-        start_music();
+        // start_music();
         start();
       }else{
         button_on=false;
         document.getElementById("button").innerHTML="スタート";
-        stop_music();
+        // stop_music();
         stop();
       }
     }
     reset_button.onclick=function(){
+      if(button_on){
+        button_on=false
+        document.getElementById("button").innerHTML="スタート"
+      }
       reset();
     }
 
