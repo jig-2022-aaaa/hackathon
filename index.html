@@ -6,7 +6,6 @@
     <title>Sample</title>
     <link rel="stylesheet" href="sample.css" />
     <script src="time.js"></script>
-    <script src="music.js"></script>
 
     <!--BGM-->
     <audio id="BGM1">
@@ -77,12 +76,10 @@
         document.getElementById("main_box").innerHTML = mode1_code; //ここにクッキ―から取得した奴いれる
         //else
         document.getElementById("main_box").innerHTML = mode1_code;
-        start_music();
         start();
       } else {
         button_on = false;
         document.getElementById("button").innerHTML = "スタート";
-        stop_music();
         stop();
       }
     };
