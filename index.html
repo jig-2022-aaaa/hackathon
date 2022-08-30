@@ -16,6 +16,9 @@
   <audio id="stopSE">
     <source src="./効果音/鳩時計2.mp3" type="audio/mp3">
   </audio>
+  <audio id="speedupSE">
+    <source src="./効果音/回復魔法3.mp3" type="audio/mp3">
+  </audio>
   </head>
 
   <body>
@@ -36,7 +39,6 @@
       if(!button_on){
         button_on=true;
         document.getElementById("button").innerHTML="ストップ";
-        document.getElementById('BGM1').play();
         start_music();
         start();
       }else{

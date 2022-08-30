@@ -10,23 +10,39 @@ function now(){
             var timeM=Math.floor(timeALL/60);
             if(timeS<10)timeS='0'+timeS;
             if(timeM<10)timeM='0'+timeM;
+
+            //BGM
+            document.getElementById('BGM1').play();
+            if(timeALL>300){
+                document.getElementById('BGM1').playbackRate = 0.75;
+            }else{
+                document.getElementById('BGM1').playbackRate = 3.0;
+            }
         }else if(interval_timeALL>0){//インターバル時間
             interval_timeALL--;
             var timeS=interval_timeALL%60;
             var timeM=Math.floor(interval_timeALL/60);
             if(timeS<10)timeS='0'+timeS;
             if(timeM<10)timeM='0'+timeM;
+
+            //BGM
+            document.getElementById('BGM1').pause();
         }else{
             timeALL=1500;
             interval_timeALL=300;
         }
         
         //効果音
-        if(timeALL==0)document.getElementById('finSE').play();
+        if(timeALL==300){
+            document.getElementById('speedupSE').play();
+        }
+        if(timeALL==0){
+            document.getElementById('finSE').play();
+        }
         if(interval_timeALL==0)document.getElementById('finSE').play();
  
         document.getElementById("time").innerHTML=timeM+":"+timeS;
-        if(bool_stop==false)window.setTimeout(now, 5);
+        if(bool_stop==false)window.setTimeout(now, 20);
     }
 }
 
@@ -40,6 +56,7 @@ function start(){
 
 function stop(){
     bool_stop=true;
+    document.getElementById('BGM1').pause();
     now();
 }
 
@@ -48,5 +65,7 @@ function reset(){
     bool_stop=true;
     document.getElementById("time").innerHTML="____";
     document.getElementById('stopSE').play();
+
+    document.getElementById('BGM1').pause();
 }
 
