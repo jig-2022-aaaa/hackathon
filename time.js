@@ -13,6 +13,7 @@ function now(){
 
             //BGM
             document.getElementById('BGM1').play();
+            document.getElementById('BGM1_back').pause();
             if(timeALL>300){
                 document.getElementById('BGM1').playbackRate = 0.75;
             }else{
@@ -26,7 +27,9 @@ function now(){
             if(timeM<10)timeM='0'+timeM;
 
             //BGM
+            document.getElementById('BGM1_back').play();
             document.getElementById('BGM1').pause();
+            document.getElementById('BGM1_back').playbackRate = 0.75;
         }else{
             timeALL=1500;
             interval_timeALL=300;
