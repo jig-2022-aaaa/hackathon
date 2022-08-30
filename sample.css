@@ -14,6 +14,10 @@
 	transform: translate(-50%, -50%);
 }
 
+.form{/*フォームがダサすぎる*/
+    background-color:#123456;
+}
+
 .circle{
     position: absolute;
 	top: 50%;
