@@ -4,16 +4,13 @@ var bool_stop=true;
 function now(){
     if(!bool_stop){
         timeALL--;
-        var timeS=timeALL%60;
-        var timeM=Math.floor(timeALL/60);
-
-        var str_timeS=String(str_timeS);
-        var str_timeM=String(str_timeM);
-        if(timeS<10)str_timeS="0"+str_timeS;
-        if(timeM<10)str_timeS="0"+str_timeM;
+        let timeS=timeALL%60;
+        let timeM=Math.floor(timeALL/60);
+        if(timeS<10)timeS='0'+timeS;
+        if(timeM<10)timeS='0'+timeM;
  
         document.getElementById("time").innerHTML=timeM+":"+timeS;
-        if(bool_stop==false)window.setTimeout(now, 100);
+        if(bool_stop==false)window.setTimeout(now, 1000);
     }
 }
 
@@ -31,6 +28,7 @@ function stop(){
 }
 
 function reset(){
-    // リセット機能を追加
+    timeALL=1500;
+    bool_stop=true;
 }
 
