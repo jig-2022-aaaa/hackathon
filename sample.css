@@ -1,35 +1,43 @@
+@font-face{
+  font-family: "ichigojam";
+  font-style:normal;
+  font-weight:400;
+  src: local('IchigoJam-1.2'), local('IchigoJam-1.2-Regular'),url("https://cdn.jsdelivr.net/gh/fu-sen/ichigojam-font@20190814/IchigoJam-1.4.woff") format('woff');
+}
+
 :root {
-    --cir-size: 60%;/*‚±‚±‚ğ•Ï‚¦‚é*/
-  }
+    --cir-size: 60%;/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï‚ï¿½ï¿½ï¿½*/
+}
 
 .time{
-    font-size: 25vw;
+  font-family: 'ichigojam';
+    font-size: 15vw;
     text-align: center;
-  }
+}
 
-  clock{
-    position: absolute;
+clock{
+  position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.form{/*ƒtƒH[ƒ€‚ªƒ_ƒT‚·‚¬‚é*/
+.form{/*ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½Tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
     background-color:#123456;
 }
 
 .circle{
-    position: absolute;
+  position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: solid 4px skyblue;
-    margin: 10px auto;
-  }
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: solid 4px skyblue;
+  margin: 10px auto;
+}
 
 .circle::after{
 	content: '';
@@ -41,4 +49,4 @@
 	height: 120%;
 	background-image: conic-gradient(#ffffff var(--cir-size) 0%, transparent 0% 0%);
 	border-radius: 50%;
-  }
+}
