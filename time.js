@@ -11,7 +11,7 @@ function now(){
     if(!bool_stop){
         if(time>0){//タスク実行状態
             time--;
-            root.style.setProperty('--cir-size',Math.floor(time*100/timeALL)+"%");
+            root.style.setProperty('--cir-size',(time*100/timeALL).toFixed(2)+"%");
             var timeS=time%60;
             var timeM=Math.floor(time/60);
             if(timeS<10)timeS='0'+timeS;
