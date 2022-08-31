@@ -4,7 +4,7 @@
     <!--jigフォントをダウンロードする？-->
     <meta charset="utf-8" />
     <title>Sample</title>
-    <link rel="stylesheet" href="sample.css" />
+    <link rel="stylesheet" href="sample.css" type="text/css"/>
     <script src="time.js"></script>
 
     <!--BGM-->
@@ -32,6 +32,7 @@
   </head>
 
   <body>
+    <a class="circle"></a>
     <input
       id="task_value"
       type="text"
@@ -52,7 +53,7 @@
       </h2>
       <ul id="done_list"></ul>
     </div>
-    <a class="circle"></a>
+    
     <clock>
       <button id="button">スタート</button>
       <button id="reset">完了！！</button>
@@ -100,6 +101,6 @@
       reset();
     };
   </script>
-  <script src="music.js"></script>
+  
   <script src="task.js"></script>
 </html>
