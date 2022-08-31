@@ -31,13 +31,7 @@
   </head>
 
   <body>
-    <form>
-      <input
-        id="task_value"
-        type="text"
-        placeholder="25分間の目標を入力しよう"
-      />
-    </form>
+    <input id="task_value" type="text" placeholder="25分間の目標を入力しよう" />
     <div id="table">
       <h2>取り組んでいるタスク</h2>
       <ul id="task_list"></ul>
@@ -62,7 +56,7 @@
     button_on = false;
     const button_button = document.getElementById("button");
     const reset_button = document.getElementById("reset");
-    reset_button.style.display="none";
+    reset_button.style.display = "none";
     //目標
     mode1_code = "<div>特に目標は無し</div>";
     //二回目以降のフォーム
@@ -77,7 +71,7 @@
         document.getElementById("main_box").innerHTML = mode1_code; //ここにクッキ―から取得した奴いれる
         //else
         document.getElementById("main_box").innerHTML = mode1_code;
-        reset_button.style.display="block";
+        reset_button.style.display = "block";
         start();
       } else {
         button_on = false;
@@ -89,7 +83,7 @@
       button_on = false;
       document.getElementById("button").innerHTML = "スタート";
       document.getElementById("main_box").innerHTML = mode2_code;
-      reset_button.style.display="none";
+      reset_button.style.display = "none";
       reset();
     };
   </script>
